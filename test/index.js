@@ -27,7 +27,7 @@ files.forEach(function (filename) {
 			return map;
 		}, { none: code });
 
-		var supported = ['none', 'multi'];
+		var supported = ['none', 'single', 'multi'];
 		supported.forEach(function (style) {
 			test(prefix + ': ' + style, function (t) {
 				var expected = samples[style];
