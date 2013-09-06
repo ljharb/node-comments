@@ -1,0 +1,41 @@
+{
+	"name": "comments",
+	"version": "0.0.0",
+	"description": "Transform between different comment styles",
+	"main": "lib/comments.js",
+	"bin": {
+		"comments": "bin/cmd.js"
+	},
+	"preferGlobal": true,
+	"scripts": {
+		"test": "node test/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ljharb/node-comments.git"
+	},
+	"keywords": [
+		"comment",
+		"comments",
+		"html",
+		"comments",
+		"multiline",
+		"//",
+		"/*"
+	],
+	"author": "Jordan Harband",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ljharb/node-comments/issues"
+	},
+	"dependencies": {
+		"extend": "~1.2.0",
+		"listify": "~0.0.1",
+		"literalizer": "~0.3.0",
+		"optimist": "~0.6.0"
+	},
+	"devDependencies": {
+		"tape": "~1.1.0"
+	}
+}
+
