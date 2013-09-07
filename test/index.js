@@ -20,14 +20,14 @@ files.forEach(function (filename) {
 		if (code.trim() === '') { return; }
 
 		var samples = Object.keys(transform.STYLES).reduce(function (map, style) {
-			var variantFilename = path.join(samplesDir, filename.replace('original', style));
+			var variantFilename = path.join(samplesDir, filename.replace('original', style.toLowerCase()));
 			if (fs.existsSync(variantFilename)) {
 				map[style] = fs.readFileSync(variantFilename).toString();
 			}
 			return map;
 		}, { none: code });
 
-		var supported = ['none', 'single', 'multi'];
+		var supported = ['none', 'single', 'multi', 'singleMulti'];
 		supported.forEach(function (style) {
 			test(prefix + ': ' + style, function (t) {
 				var expected = samples[style];
