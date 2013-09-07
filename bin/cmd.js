@@ -13,6 +13,8 @@ var opt = require('optimist')
 	.usage('Usage: $0 --style [style] [file1.js] [file2.js] … [fileN.js]')
 	.describe('style', 'Specify a style. Currently supported: ' + listify(styles))
 	.demand('style')
+	.describe('save', 'Save the transformed code back to the original file.')
+	.boolean('save')
 	.check(function (opt) {
 		if (styles.indexOf(opt.style) === -1) {
 			throw new SyntaxError('--style must be one of: ' + listify(styles));
@@ -43,7 +45,14 @@ if (opt.help) {
 	filenames.forEach(function (filename) {
 		var code = fs.readFileSync(filename).toString();
 		transform(code, transform.STYLES[opt.style], function (err, transformed) {
-			console.log(transformed);
+			if (opt.save) {
+				fs.writeFile(filename, transformed, function (err) {
+					if (err) { throw err; }
+					console.log(filename + ' transformed successfully');
+				});
+			} else {
+				console.log(transformed);
+			}
 		});
 	});
 }
