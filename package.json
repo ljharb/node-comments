@@ -31,7 +31,7 @@
 	"dependencies": {
 		"extend": "~1.2.0",
 		"listify": "~0.0.1",
-		"literalizer": "~0.3.0",
+		"literalizer": "~0.4.0",
 		"optimist": "~0.6.0"
 	},
 	"devDependencies": {
