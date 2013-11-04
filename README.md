@@ -2,6 +2,8 @@
 
 [![Build Status][3]][4] [![dependency status][5]][6] [![dev dependency status][7]][8]
 
+[![npm badge][9]][1]
+
 Transform comments in JS files between multiple styles - single-line, multi-line, both, and more to come!
 
 ## Example
@@ -22,4 +24,5 @@ Simply clone the repo, `npm install`, and run `npm test`
 [6]: https://david-dm.org/ljharb/node-comments
 [7]: https://david-dm.org/ljharb/node-comments/dev-status.png
 [8]: https://david-dm.org/ljharb/node-comments#info=devDependencies
+[9]: https://nodei.co/npm/comments.png?downloads=true&stars=true
 
