@@ -12,6 +12,9 @@ var someFunction = function () { // this function is awesome
 
 /* nested multiline comment /**
 	here is a line with tabs
+
+
+^ that was 2 newlines
   here is a line with spaces
 */ var hereIsAVar = 7; // and a single line comment
 
