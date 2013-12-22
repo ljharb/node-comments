@@ -8,7 +8,9 @@
 	},
 	"preferGlobal": true,
 	"scripts": {
-		"test": "node test/index.js"
+		"test": "node test/index.js",
+		"coverage": "covert test/*.js",
+		"coverage-quiet": "covert test/*.js --quiet"
 	},
 	"repository": {
 		"type": "git",
@@ -35,7 +37,8 @@
 		"optimist": "~0.6.0"
 	},
 	"devDependencies": {
-		"tape": "~2.3.2"
+		"tape": "~2.3.2",
+		"covert": "~0.2.0"
 	}
 }
 
