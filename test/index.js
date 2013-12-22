@@ -27,15 +27,17 @@ files.forEach(function (filename) {
 			return map;
 		}, { none: code });
 
-		var supported = ['none', 'single', 'multi', 'singleMulti'];
+		var supported = [null, 'none', 'single', 'multi', 'singleMulti'];
 		supported.forEach(function (style) {
 			test(prefix + ': ' + style, function (t) {
-				var expected = samples[style];
+				var expected = samples[style || 'none'];
 				t.plan(2);
-				transform(code, transform.STYLES[style], function (err, transformed) {
+				var callback = function (err, transformed) {
 					t.notOk(err, 'no error');
 					t.equal(transformed, expected, style + ' transformed as expected');
-				});
+				};
+				if (style === null) { transform(code, callback); }
+				else { transform(code, transform.STYLES[style], callback); }
 				t.end();
 			});
 		});
