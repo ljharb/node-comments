@@ -3,6 +3,7 @@
 
 var test = require('tape');
 var transform = require('../lib/comments.js');
+var Promise = require('promiseback').Deferred.Promise;
 var fs = require('fs');
 var path = require('path');
 var samplesDir = path.join(__dirname, 'samples');
@@ -33,14 +34,18 @@ files.forEach(function (filename) {
 		supported.forEach(function (style) {
 			test(prefix + ': ' + style, function (t) {
 				var expected = samples[style || 'none'];
-				t.plan(2);
+				t.plan(4);
 				var callback = function (err, transformed) {
 					t.notOk(err, 'no error');
 					t.equal(transformed, expected, style + ' transformed as expected');
 				};
-				if (style === null) { transform(code, callback); }
-				else { transform(code, transform.STYLES[style], callback); }
-				t.end();
+				var transformed;
+				if (style === null) { transformed = transform(code, callback); }
+				else { transformed = transform(code, transform.STYLES[style], callback); }
+				t.ok(transformed instanceof Promise, 'returns a promise');
+				transformed.then(function (value) {
+					t.equal(value, expected, 'returns a fulfilled promise with the right value');
+				});
 			});
 		});
 	}
