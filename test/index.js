@@ -10,8 +10,6 @@ var samplesDir = path.join(__dirname, 'samples');
 
 var originalRegex = /\.original\.js$/;
 var files = fs.readdirSync(samplesDir);
-var existsSync = fs.existsSync || path.existsSync;
-
 files.forEach(function (filename) {
 	var prefix = filename.replace(originalRegex, '');
 	if (originalRegex.test(filename)) {
@@ -24,7 +22,7 @@ files.forEach(function (filename) {
 
 		var samples = Object.keys(transform.STYLES).reduce(function (map, style) {
 			var variantFilename = path.join(samplesDir, filename.replace('original', style.toLowerCase()));
-			if (existsSync(variantFilename)) {
+			if (fs.existsSync(variantFilename)) {
 				map[style] = fs.readFileSync(variantFilename).toString();
 			}
 			return map;
