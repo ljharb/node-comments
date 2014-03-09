@@ -39,8 +39,8 @@
 		"promiseback": "~0.1.0"
 	},
 	"devDependencies": {
-		"tape": "~2.4.0",
-		"covert": "~0.3.0"
+		"tape": "~2.10.2",
+		"covert": "~0.3.1"
 	},
 	"engines": {
 		"node": ">= 0.4"
