@@ -1,6 +1,6 @@
 {
 	"name": "comments",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "Transform between different comment styles",
 	"main": "lib/comments.js",
 	"bin": {
