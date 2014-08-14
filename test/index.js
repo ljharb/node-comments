@@ -18,7 +18,6 @@ files.forEach(function (filename) {
 			t.notEqual(code.trim(), '', 'code is not empty');
 			t.end();
 		});
-		if (code.trim() === '') { return; }
 
 		var samples = Object.keys(transform.STYLES).reduce(function (map, style) {
 			var variantFilename = path.join(samplesDir, filename.replace('original', style.toLowerCase()));
