@@ -37,8 +37,11 @@ files.forEach(function (filename) {
 					t.equal(transformed, expected, style + ' transformed as expected');
 				};
 				var transformed;
-				if (style === null) { transformed = transform(code, callback); }
-				else { transformed = transform(code, transform.STYLES[style], callback); }
+				if (style === null) {
+					transformed = transform(code, callback);
+				} else {
+					transformed = transform(code, transform.STYLES[style], callback);
+				}
 				t.ok(transformed instanceof Promise, 'returns a promise');
 				transformed.then(function (value) {
 					t.equal(value, expected, 'returns a fulfilled promise with the right value');
