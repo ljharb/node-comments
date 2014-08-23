@@ -18,11 +18,11 @@ Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/comments
 [2]: http://vb.teelaun.ch/ljharb/node-comments.svg
-[3]: https://travis-ci.org/ljharb/node-comments.png
+[3]: https://travis-ci.org/ljharb/node-comments.svg
 [4]: https://travis-ci.org/ljharb/node-comments
-[5]: https://david-dm.org/ljharb/node-comments.png
+[5]: https://david-dm.org/ljharb/node-comments.svg
 [6]: https://david-dm.org/ljharb/node-comments
-[7]: https://david-dm.org/ljharb/node-comments/dev-status.png
+[7]: https://david-dm.org/ljharb/node-comments/dev-status.svg
 [8]: https://david-dm.org/ljharb/node-comments#info=devDependencies
 [9]: https://nodei.co/npm/comments.png?downloads=true&stars=true
 
