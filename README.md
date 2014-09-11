@@ -1,4 +1,4 @@
-#comments <sup>[![Version Badge][2]][npm-url]</sup>
+#comments <sup>[![Version Badge][npm-version-svg]][npm-url]</sup>
 
 [![Build Status][3]][4] [![dependency status][5]][6] [![dev dependency status][7]][8]
 
@@ -17,7 +17,7 @@ comments --style multi --save file_with_single_line_comments.js
 Simply clone the repo, `npm install`, and run `npm test`
 
 [npm-url]: https://npmjs.org/package/comments
-[2]: http://vb.teelaun.ch/ljharb/node-comments.svg
+[npm-version-svg]: http://vb.teelaun.ch/ljharb/node-comments.svg
 [3]: https://travis-ci.org/ljharb/node-comments.svg
 [4]: https://travis-ci.org/ljharb/node-comments
 [5]: https://david-dm.org/ljharb/node-comments.svg
