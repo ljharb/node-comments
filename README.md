@@ -1,8 +1,8 @@
-#comments <sup>[![Version Badge][2]][1]</sup>
+#comments <sup>[![Version Badge][2]][npm-url]</sup>
 
 [![Build Status][3]][4] [![dependency status][5]][6] [![dev dependency status][7]][8]
 
-[![npm badge][9]][1]
+[![npm badge][9]][npm-url]
 
 Transform comments in JS files between multiple styles - single-line, multi-line, both, and more to come!
 
@@ -16,7 +16,7 @@ comments --style multi --save file_with_single_line_comments.js
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
 
-[1]: https://npmjs.org/package/comments
+[npm-url]: https://npmjs.org/package/comments
 [2]: http://vb.teelaun.ch/ljharb/node-comments.svg
 [3]: https://travis-ci.org/ljharb/node-comments.svg
 [4]: https://travis-ci.org/ljharb/node-comments
