@@ -4,7 +4,7 @@
 [![dependency status][deps-svg]][deps-url]
 [![dev dependency status][dev-deps-svg]][dev-deps-url]
 
-[![npm badge][9]][npm-url]
+[![npm badge][npm-badge-png]][npm-url]
 
 Transform comments in JS files between multiple styles - single-line, multi-line, both, and more to come!
 
@@ -26,5 +26,5 @@ Simply clone the repo, `npm install`, and run `npm test`
 [deps-url]: https://david-dm.org/ljharb/node-comments
 [dev-deps-svg]: https://david-dm.org/ljharb/node-comments/dev-status.svg
 [dev-deps-url]: https://david-dm.org/ljharb/node-comments#info=devDependencies
-[9]: https://nodei.co/npm/comments.png?downloads=true&stars=true
+[npm-badge-png]: https://nodei.co/npm/comments.png?downloads=true&stars=true
 
