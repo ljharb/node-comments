@@ -19,7 +19,7 @@ comments --style multi --save file_with_single_line_comments.js
 Simply clone the repo, `npm install`, and run `npm test`
 
 [npm-url]: https://npmjs.org/package/comments
-[npm-version-svg]: http://vb.teelaun.ch/ljharb/node-comments.svg
+[npm-version-svg]: http://versionbadg.es/ljharb/node-comments.svg
 [travis-svg]: https://travis-ci.org/ljharb/node-comments.svg
 [travis-url]: https://travis-ci.org/ljharb/node-comments
 [deps-svg]: https://david-dm.org/ljharb/node-comments.svg
