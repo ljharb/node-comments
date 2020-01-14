@@ -40,11 +40,10 @@
 		"url": "https://github.com/ljharb/node-comments/issues"
 	},
 	"dependencies": {
-		"extend": "^3.0.0",
 		"listify": "^1.0.0",
 		"literalizer": "^0.4.0-a",
 		"optimist": "^0.6.1",
-		"promiseback": "^2.0.1"
+		"promiseback": "^2.0.2"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^15.1.0",
