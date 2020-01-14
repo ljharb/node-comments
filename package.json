@@ -9,7 +9,8 @@
 	"preferGlobal": true,
 	"scripts": {
 		"pretest": "npm run lint",
-		"test": "node test",
+		"tests-only": "node test",
+		"test": "npm run tests-only",
 		"posttest": "npx aud",
 		"coverage": "covert test/*.js",
 		"lint": "eslint .",
