@@ -29,6 +29,9 @@
 		"/*"
 	],
 	"author": "Jordan Harband",
+	"funding": {
+		"url": "https://github.com/sponsors/ljharb"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/ljharb/node-comments/issues"
@@ -50,4 +53,3 @@
 		"node": ">= 0.4"
 	}
 }
-
