@@ -9,10 +9,10 @@
 	"preferGlobal": true,
 	"scripts": {
 		"pretest": "npm run lint",
-		"test": "node test && npm run security",
+		"test": "node test",
+		"posttest": "npx aud",
 		"coverage": "covert test/*.js",
 		"lint": "eslint .",
-		"security": "nsp package",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
@@ -50,7 +50,6 @@
 		"auto-changelog": "^1.16.2",
 		"covert": "^1.1.0",
 		"eslint": "^6.8.0",
-		"nsp": "^1.0.3",
 		"tape": "^4.2.0"
 	},
 	"engines": {
