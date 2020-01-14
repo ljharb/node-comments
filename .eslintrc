@@ -1,0 +1,30 @@
+{
+	"root": true,
+
+	"extends": "@ljharb",
+
+	"rules": {
+		"func-name-matching": [2, "always"],
+		"id-length": 1,
+		"max-params": [2, 3],
+		"max-statements": [2, 15],
+		"multiline-comment-style": 0,
+		"no-param-reassign": 1,
+	},
+
+	"overrides": [
+		{
+			"files": "bin/**",
+			"env": {
+				"node": true,
+			},
+			"parserOptions": {
+				"ecmaVersion": 5,
+			},
+			"rules": {
+				"dot-notation": [2, { "allowKeywords": true }],
+				"no-console": 0,
+			},
+		},
+	],
+}

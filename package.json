@@ -8,10 +8,10 @@
 	},
 	"preferGlobal": true,
 	"scripts": {
-		"test": "npm run lint && node test/index.js && npm run security",
+		"pretest": "npm run lint",
+		"test": "node test && npm run security",
 		"coverage": "covert test/*.js",
-		"coverage-quiet": "covert test/*.js --quiet",
-		"lint": "jscs */*.js",
+		"lint": "eslint .",
 		"security": "nsp package",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
@@ -46,9 +46,10 @@
 		"promiseback": "^2.0.1"
 	},
 	"devDependencies": {
+		"@ljharb/eslint-config": "^15.1.0",
 		"auto-changelog": "^1.16.2",
 		"covert": "^1.1.0",
-		"jscs": "^2.1.0",
+		"eslint": "^6.8.0",
 		"nsp": "^1.0.3",
 		"tape": "^4.2.0"
 	},

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-/*jslint node: true */
 'use strict';
 
 var fs = require('fs');
@@ -15,7 +14,7 @@ var opt = require('optimist')
 	.demand('style')
 	.describe('save', 'Save the transformed code back to the original file.')
 	.boolean('save')
-	.check(function (opt) {
+	.check(function (opt) { // eslint-disable-line no-shadow
 		if (styles.indexOf(opt.style) === -1) {
 			throw new SyntaxError('--style must be one of: ' + listify(styles));
 		} else if (!Array.isArray(opt._) || opt._.length === 0) {
@@ -46,10 +45,8 @@ if (opt.help) {
 		var code = fs.readFileSync(filename).toString();
 		transform(code, transform.STYLES[opt.style], function (err, transformed) {
 			if (opt.save) {
-				fs.writeFile(filename, transformed, function (err) {
-					if (err) { throw err; }
-					console.log(filename + ' transformed successfully');
-				});
+				fs.writeFileSync(filename, transformed);
+				console.log(filename + ' transformed successfully');
 			} else {
 				console.log(transformed);
 			}
