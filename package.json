@@ -47,7 +47,7 @@
 		"promiseback": "^2.0.3"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^16.0.0",
+		"@ljharb/eslint-config": "^17.1.0",
 		"aud": "^1.1.0",
 		"auto-changelog": "^2.0.0",
 		"covert": "^1.1.1",
